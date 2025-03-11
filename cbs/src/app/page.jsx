@@ -4,14 +4,16 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input.jsx";
 import { Button } from "@/components/ui/button";
 import { useState  } from "react";
-import { register } from "@/lib/user";    
+// import { register } from "@/lib/user";    
 
-const page = () => {
+const page =  () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // const handle
+  // const session = await getSession();
+  // const user = session?.user;
+  // if (user) redirect("/user/dashboard");
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -26,7 +28,8 @@ const page = () => {
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <form className="flex flex-col gap-4 p-15 w-1/4 border-black bg-white-500 rounded-xl" 
       onSubmit={handleLogin}
-       action={register}>
+      //  action={register}
+       >
         <Label>Email</Label>
         <Input
           placeholder="trkrishna@gmail.com"
